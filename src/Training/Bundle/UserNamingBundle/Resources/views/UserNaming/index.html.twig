@@ -3,3 +3,8 @@
 
 {% set gridName = 'user-naming-types-grid' %}
 {% set pageTitle = 'usernaming.usernamingtype.entity_plural_label'|trans %}
+
+
+{% block navButtons %}
+    {% include '@OroImportExport/ImportExport/buttons_from_configuration.html.twig' with {'alias': 'user_naming'} %}
+{% endblock %}
