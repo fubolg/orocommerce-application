@@ -14,6 +14,12 @@ use Oro\Bundle\EntityExtendBundle\Entity\ExtendEntityTrait;
  *      defaultValues={
  *          "entity"={
  *              "icon"="fa-child"
+ *          },
+ *          "security"={
+ *              "type"="ACL",
+ *              "permissions"="All",
+ *              "group_name"="",
+ *              "category"="",
  *          }
  *      }
  * )
