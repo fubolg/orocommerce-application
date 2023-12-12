@@ -46,6 +46,7 @@ datagrids:
         acl_resource: user_naming_view
 
   related-users-by-naming-type:
+    acl_resource: oro_user_user_view
     source:
       type: orm
       query:
