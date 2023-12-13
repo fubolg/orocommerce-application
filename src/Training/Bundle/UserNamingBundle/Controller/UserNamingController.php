@@ -8,6 +8,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Oro\Bundle\FormBundle\Model\UpdateHandlerFacade;
+use Oro\Bundle\SecurityBundle\Annotation\Acl;
+use Oro\Bundle\SecurityBundle\Annotation\AclAncestor;
 
 /**
  * Contains CRUD actions for User Naming
@@ -17,6 +19,8 @@ class UserNamingController extends AbstractController
     /**
      * @Route("/", name="user_naming_index")
      * @Template
+     *
+     * @AclAncestor("user_naming_view")
      *
      * @return array
      */
@@ -30,6 +34,13 @@ class UserNamingController extends AbstractController
     /**
      * @Route("/view/{id}", name="user_naming_view", requirements={"id"="\d+"})
      * @Template
+     *
+     * @Acl(
+     *    id="user_naming_view",
+     *    type="entity",
+     *    class="TrainingUserNamingBundle:UserNamingType",
+     *    permission="VIEW"
+     *  )
      *
      * @param UserNamingType $type
      *

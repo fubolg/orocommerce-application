@@ -6,12 +6,19 @@ usernaming:
     id.label: 'ID'
     title.label: 'Title'
     format.label: 'Naming Format'
+    full_formatted_name: 'Full Formatted Name'
+    full_formatted_name_example: 'Formatted Name Example'
+    sections:
+      general: 'General Information'
+      related_users: 'Related Users'
+    security:
+      user_naming_info:
+        label: 'User naming information'
+        description: 'Show full User naming information at User view page'
 
-  full_formatted_name: 'Full Formatted Name'
-  full_formatted_name_example: 'Formatted Name Example'
-  sections:
-    general: 'General Information'
-    related_users: 'Related Users'
+training.usernaming:
+  usernamingtype:
+    entity_label: 'User Naming Type'
 
 oro.user:
   naming_type.label: 'User Naming Type'

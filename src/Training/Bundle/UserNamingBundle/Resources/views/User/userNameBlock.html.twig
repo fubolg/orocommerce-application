@@ -1,7 +1,7 @@
 {% import '@OroUI/macros.html.twig' as UI %}
 
 {% if entity.namingType %}
-    {{ UI.renderProperty('training.usernaming.full_formatted_name_example'|trans, entity.namingType.format|full_name_example) }}
+    {{ UI.renderProperty('usernaming.full_formatted_name_example'|trans, entity.namingType.format|full_name_example) }}
 {% endif %}
 
 {{ UI.renderProperty('usernaming.full_formatted_name'|trans, entity|oro_format_name) }}
