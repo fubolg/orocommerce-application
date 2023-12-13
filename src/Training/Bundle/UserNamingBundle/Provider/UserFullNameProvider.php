@@ -24,4 +24,20 @@ class UserFullNameProvider
             ]
         );
     }
+
+    /**
+     * @param string $format
+     * @return string
+     */
+    public function getFullNameExample(string $format): string
+    {
+        $user = new User();
+        $user->setNamePrefix('Mr.')
+            ->setFirstName('Max')
+            ->setMiddleName('Oleksiyovich')
+            ->setLastName('Max')
+            ->setNameSuffix('Jr.');
+
+        return $this->getFullName($user, $format);
+    }
 }
